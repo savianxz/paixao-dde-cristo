@@ -7,6 +7,7 @@ import Confrontation from './components/Confrontation'
 import TransformOffer from './components/TransformOffer'
 import Footer from './components/Footer'
 import OpenLoop from './components/OpenLoop'
+import StrategicQuiz from './components/StrategicQuiz'
 import { motion } from 'framer-motion'
 
 export default function App() {
@@ -31,6 +32,8 @@ export default function App() {
       <OpenLoop text="Não foi coincidência." />
       
       <PainSection />
+      
+      <StrategicQuiz />
       
       <OpenLoop text="Mas você viu." />
       

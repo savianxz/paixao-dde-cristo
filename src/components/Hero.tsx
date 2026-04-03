@@ -50,7 +50,7 @@ export default function Hero() {
               className="px-16 py-7 bg-white text-black font-black text-xl rounded-full shadow-[0_0_100px_rgba(255,255,255,0.2)] uppercase tracking-[0.3em] transition-all duration-500 hover:shadow-[0_0_150px_rgba(255,255,255,0.4)] cursor-pointer group overflow-hidden relative"
               onClick={() => window.scrollTo({ top: window.innerHeight * 0.9, behavior: 'smooth' })}
             >
-              <span className="relative z-10">Parar de ignorar isso agora</span>
+              <span className="relative z-10">ENTENDER ISSO AGORA</span>
               <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             </motion.button>
           </motion.div>
