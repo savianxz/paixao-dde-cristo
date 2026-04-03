@@ -14,8 +14,8 @@ export default function BeliefBreaker() {
         >
           <div className="w-1.5 h-1.5 bg-white/20 mx-auto rounded-full mb-8 shadow-[0_0_20px_rgba(255,255,255,0.05)]" />
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-widest leading-[1.05] uppercase">
-            Onde o desabafo termina… <br />
-            <span className="text-white/30 italic font-light lowercase">e o confronto começa.</span>
+            A dor da estagnação… <br />
+            <span className="text-white/30 italic font-light lowercase">não é falta de disciplina.</span>
           </h2>
         </motion.div>
 
@@ -27,7 +27,7 @@ export default function BeliefBreaker() {
              transition={{ duration: 1, delay: 0.8 }}
              className="text-2xl md:text-4xl font-light text-white/50 tracking-wide italic"
           >
-            "Não foi a falta de recursos que te trouxe aqui."
+            "O problema nunca foi sua falta de força de vontade."
           </motion.div>
 
           <motion.div
@@ -37,8 +37,8 @@ export default function BeliefBreaker() {
              transition={{ duration: 1.5, delay: 1.5 }}
              className="text-4xl md:text-6xl font-black text-white tracking-tighter"
           >
-            Foi a falta de coragem <br className="hidden md:block" /> 
-            de olhar para o que dói.
+            Existe algo profundo <br className="hidden md:block" /> 
+            que você ainda não entendeu.
           </motion.div>
         </div>
 

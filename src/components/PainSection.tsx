@@ -14,7 +14,7 @@ export default function PainSection() {
           className="space-y-4"
         >
           <p className="text-4xl md:text-6xl font-light text-white/60 tracking-wider leading-relaxed">
-            Você já tentou parar.
+            Acordar motivado. Prometer que hoje será diferente.
           </p>
         </motion.div>
 
@@ -26,8 +26,8 @@ export default function PainSection() {
           transition={{ duration: 1.5, delay: 0.8 }}
           className="space-y-4"
         >
-          <p className="text-4xl md:text-6xl font-light text-white/60 tracking-tight leading-relaxed">
-            E voltou.
+          <p className="text-3xl md:text-5xl font-light text-white/60 tracking-tight leading-relaxed">
+            Mas no fim do dia... o mesmo vício, a mesma procrastinação, o mesmo ciclo.
           </p>
         </motion.div>
 
@@ -39,8 +39,8 @@ export default function PainSection() {
            transition={{ duration: 2, delay: 1.8 }}
            className="space-y-6"
         >
-          <p className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none uppercase">
-            Mais de uma vez.
+          <p className="text-4xl md:text-7xl font-black text-white tracking-tighter leading-none uppercase">
+            E a conta bancária cada vez menor.
           </p>
           <div className="w-1.5 h-1.5 bg-red-600 rounded-full mx-auto animate-pulse shadow-[0_0_10px_rgba(220,38,38,0.5)]" />
         </motion.div>

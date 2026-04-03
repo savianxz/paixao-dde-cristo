@@ -3,10 +3,10 @@ import { Eye, Shield, Map, Compass } from 'lucide-react'
 
 export default function Solution() {
   const discoveries = [
-    { text: "A raiz real da sua estagnação.", sub: "Não é preguiça. É um bloqueio sistêmico.", icon: <Eye className="w-5 h-5" /> },
-    { text: "O mapa para a saída definitiva.", sub: "Como romper o ciclo sem depender de força de vontade.", icon: <Map className="w-5 h-5" /> },
-    { text: "Proteção contra recaídas emocionais.", sub: "O escudo mental que você nunca teve.", icon: <Shield className="w-5 h-5" /> },
-    { text: "Sua nova bússola espiritual.", sub: "Clareza absoluta para seus próximos passos.", icon: <Compass className="w-5 h-5" /> },
+    { text: "A Quebra do Ciclo", sub: "Entenda o que realmente alimenta seus vícios.", icon: <Eye className="w-5 h-5" /> },
+    { text: "A Mudança Interna", sub: "Não é sobre tentar mais, é sobre agir com a clareza certa.", icon: <Map className="w-5 h-5" /> },
+    { text: "A Transformação de Ações", sub: "Trocar as horas perdidas por construção real de valor.", icon: <Shield className="w-5 h-5" /> },
+    { text: "A Consequência Natural", sub: "Quando sua mente foca no que importa, sua realidade financeira acompanha.", icon: <Compass className="w-5 h-5" /> },
   ]
 
   return (
@@ -21,7 +21,7 @@ export default function Solution() {
         >
           <div className="w-12 h-1 bg-white/10 mx-auto rounded-full" />
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-white leading-tight">
-             O que você vai <br/> <span className="text-white/40 italic">ver lá dentro…</span>
+             O que acontece quando <br/> <span className="text-white/40 italic">você entende a verdade…</span>
           </h2>
         </motion.div>
 
@@ -62,7 +62,7 @@ export default function Solution() {
             className="px-12 py-5 bg-white text-black font-black text-lg rounded-full shadow-[0_0_50px_rgba(255,255,255,0.1)] uppercase tracking-[0.2em] transition-all hover:shadow-[0_0_80px_rgba(255,255,255,0.2)]"
             onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
           >
-            Parar de ignorar isso agora
+            Entender isso agora
           </motion.button>
         </motion.div>
       </div>

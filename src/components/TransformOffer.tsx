@@ -14,12 +14,12 @@ export default function TransformOffer() {
         >
           <div className="w-1.5 h-1.5 bg-red-600/30 mx-auto rounded-full mb-12 shadow-[0_0_40px_rgba(220,38,38,0.2)]" />
           <h2 className="text-4xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] uppercase">
-            A decisão não <br className="hidden md:block" /> 
-            é sobre hoje. <br />
-            <span className="text-white/20 italic font-light lowercase">é sobre o que restou.</span>
+            A decisão está <br className="hidden md:block" /> 
+            na sua frente. <br />
+            <span className="text-white/20 italic font-light lowercase">você pode fugir de novo.</span>
           </h2>
           <p className="text-white/40 text-xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed italic tracking-wide">
-            "Você pode fechar esta página e tentar esquecer. Mas a dúvida vai continuar lá. O peso vai continuar lá."
+            "Se você fechar essa página hoje, amanhã o peso continuará lá. O mesmo ciclo. As mesmas desculpas. A mesma frustração."
           </p>
         </motion.div>
 
@@ -38,7 +38,7 @@ export default function TransformOffer() {
             className="text-white/80 text-xl md:text-3xl font-medium tracking-[0.1em] uppercase"
           >
             Se você sair agora… <br className="md:hidden" />
-            <span className="font-black text-white">vai continuar exatamente assim.</span>
+            <span className="font-black text-white">tudo continuará exatamente igual.</span>
           </motion.p>
 
           <motion.button
@@ -49,7 +49,7 @@ export default function TransformOffer() {
                        transition-all duration-700 relative overflow-hidden group uppercase tracking-[0.3em]"
             onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
           >
-            <span className="relative z-10">Parar de ignorar isso agora</span>
+            <span className="relative z-10">Parar de ignorar isso</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
           </motion.button>
           

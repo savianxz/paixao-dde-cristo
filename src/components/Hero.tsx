@@ -28,13 +28,12 @@ export default function Hero() {
             className="space-y-6 max-w-5xl"
           >
             <h1 className="text-5xl md:text-8xl font-black leading-[0.95] tracking-tighter drop-shadow-2xl">
-              Você viu isso… <br />
-              <span className="text-white/30 italic">mas silenciou o que sentia.</span>
+              Você já tentou mudar. <br />
+              <span className="text-white/30 italic">E falhou. De novo.</span>
             </h1>
             
             <p className="text-xl md:text-3xl font-light text-white/40 max-w-2xl mx-auto italic leading-relaxed tracking-wide">
-              O peso invisível que te puxa não é cansaço. <br />
-              É o que você escolheu não ver.
+              Chegou a hora de parar de mentir para si mesmo e enfrentar o que te paralisa.
             </p>
           </motion.div>
 
@@ -50,7 +49,7 @@ export default function Hero() {
               className="px-16 py-7 bg-white text-black font-black text-xl rounded-full shadow-[0_0_100px_rgba(255,255,255,0.2)] uppercase tracking-[0.3em] transition-all duration-500 hover:shadow-[0_0_150px_rgba(255,255,255,0.4)] cursor-pointer group overflow-hidden relative"
               onClick={() => window.scrollTo({ top: window.innerHeight * 0.9, behavior: 'smooth' })}
             >
-              <span className="relative z-10">PARAR DE IGNORAR ISSO AGORA</span>
+              <span className="relative z-10">VER O QUE ESTÁ ME TRAVANDO</span>
               <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             </motion.button>
           </motion.div>
