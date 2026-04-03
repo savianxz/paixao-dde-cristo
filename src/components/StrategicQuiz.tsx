@@ -5,8 +5,8 @@ import { ChevronRight } from 'lucide-react'
 const questions = [
   {
     id: 1,
-    question: "Você já parou para observar quantas vezes as mesmas sensações se repetem na sua vida?",
-    options: ["Muitas vezes", "Sempre", "Prefiro não pensar"]
+    question: "Você repete isso. Mesmo sabendo.",
+    options: ["Toda vez", "Tento não pensar", "Não consigo evitar"]
   },
   {
     id: 2,
@@ -96,9 +96,9 @@ export default function StrategicQuiz() {
             >
               <div className="space-y-8">
                  <div className="w-1.5 h-1.5 bg-white/20 mx-auto rounded-full mb-8 animate-pulse" />
-                 <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter leading-none">
-                    Você já percebeu... <br/>
-                    <span className="text-white/20 italic font-light lowercase">mas continua evitando encarar.</span>
+                 <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none">
+                    Você não está perdido. <br/>
+                    <span className="text-white/40 italic font-bold">Você está evitando encarar.</span>
                  </h2>
                  <p className="text-white/40 text-lg md:text-2xl max-w-xl mx-auto leading-relaxed italic">
                     "O silêncio não é ausência de resposta, é o medo da Verdade tentando se proteger."

@@ -33,11 +33,12 @@ export default function TransformOffer() {
           {/* Psychological Urgency Warning */}
           <motion.p 
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 0.6 }}
+            whileInView={{ opacity: 0.8 }}
             transition={{ duration: 1.5, delay: 1.2 }}
-            className="text-white/60 text-lg md:text-2xl font-light tracking-[0.2em] italic uppercase"
+            className="text-white/80 text-xl md:text-3xl font-medium tracking-[0.1em] uppercase"
           >
-            Se você sair agora… vai esquecer isso de novo.
+            Se você sair agora… <br className="md:hidden" />
+            <span className="font-black text-white">vai continuar exatamente assim.</span>
           </motion.p>
 
           <motion.button

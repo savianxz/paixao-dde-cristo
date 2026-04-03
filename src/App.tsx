@@ -33,9 +33,9 @@ export default function App() {
       
       <PainSection />
       
-      <StrategicQuiz />
+      <OpenLoop text="Você sabe exatamente do que isso está falando." />
       
-      <OpenLoop text="Mas você viu." />
+      <StrategicQuiz />
       
       <BeliefBreaker />
       

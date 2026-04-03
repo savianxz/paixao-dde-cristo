@@ -62,7 +62,7 @@ export default function Solution() {
             className="px-12 py-5 bg-white text-black font-black text-lg rounded-full shadow-[0_0_50px_rgba(255,255,255,0.1)] uppercase tracking-[0.2em] transition-all hover:shadow-[0_0_80px_rgba(255,255,255,0.2)]"
             onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
           >
-            Ver antes que você ignore de novo
+            Parar de ignorar isso agora
           </motion.button>
         </motion.div>
       </div>
