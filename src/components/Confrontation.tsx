@@ -47,11 +47,11 @@ export default function Confrontation() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="w-full max-w-[320px] bg-white text-black font-extrabold text-lg py-5 rounded-full shadow-2xl transition-all hover:scale-[1.03] active:scale-95 uppercase tracking-widest"
+          transition={{ duration: 1 }}
+          className="w-full max-w-[320px] bg-white text-black font-extrabold text-xl py-6 rounded-full shadow-[0_0_80px_rgba(255,255,255,0.15)] transition-all hover:scale-[1.03] active:scale-98 uppercase tracking-[0.3em] hover:shadow-[0_0_120px_rgba(255,255,255,0.3)]"
           onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
         >
-          Sair do ciclo agora
+          Parar de fugir
         </motion.button>
       </div>
     </section>

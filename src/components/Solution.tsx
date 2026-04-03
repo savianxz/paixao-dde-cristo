@@ -49,6 +49,22 @@ export default function Solution() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="pt-12 flex justify-center"
+        >
+          <motion.button
+            whileHover={{ scale: 1.05, filter: 'brightness(1.2)' }}
+            whileTap={{ scale: 0.95 }}
+            className="px-12 py-5 bg-white text-black font-black text-lg rounded-full shadow-[0_0_50px_rgba(255,255,255,0.1)] uppercase tracking-[0.2em] transition-all hover:shadow-[0_0_80px_rgba(255,255,255,0.2)]"
+            onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
+          >
+            Ver antes que você ignore de novo
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   )

@@ -13,15 +13,23 @@ export default function App() {
     <main className="relative selection:bg-white selection:text-black bg-black">
       <Hero />
       
-      <OpenLoop text="Não foi coincidência." />
+      <OpenLoop text="Você viu isso..." />
       
       <PainSection />
       
-      <OpenLoop text="Você ignorou isso." />
+      <OpenLoop text="Mas ignorou." />
       
       <BeliefBreaker />
       
-      <OpenLoop text="Mas continua acontecendo." />
+      <OpenLoop text="Agora não dá mais." />
+      
+      {/* Silence Section / Dead Space */}
+      <section className="h-[100vh] flex items-center justify-center pointer-events-none">
+        <div className="flex flex-col items-center gap-12 opacity-10">
+          <div className="w-1.5 h-1.5 bg-white rounded-full" />
+          <div className="w-[1px] h-32 bg-gradient-to-b from-white to-transparent" />
+        </div>
+      </section>
       
       <Testimonials />
       
