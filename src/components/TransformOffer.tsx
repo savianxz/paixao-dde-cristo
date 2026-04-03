@@ -2,50 +2,62 @@ import { motion } from 'framer-motion'
 
 export default function TransformOffer() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden flex flex-col items-center justify-center text-center">
-      <div className="max-w-3xl mx-auto space-y-12 relative z-10">
-        <div className="space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
-            A sua nova vida <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">começa com um passo.</span>
+    <section className="py-32 px-6 relative overflow-hidden flex flex-col items-center justify-center text-center">
+      <div className="max-w-4xl mx-auto space-y-16 relative z-10">
+        
+        <motion.div
+           initial={{ opacity: 0, y: 15 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 1 }}
+           className="space-y-6"
+        >
+          <div className="w-12 h-1 bg-white/10 mx-auto rounded-full mb-8" />
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tighter leading-[1.05]">
+            A decisão não é técnica. <br />
+            <span className="text-white/40 font-light italic">É espiritual.</span>
           </h2>
-          <p className="text-zinc-400 text-lg max-w-xl mx-auto">
-            Não deixe para amanhã a decisão que pode mudar <br className="hidden md:block" />
-            o curso da sua história hoje.
+          <p className="text-white/30 text-xl md:text-2xl font-light max-w-2xl mx-auto leading-relaxed italic">
+            "Você pode fechar esta página e tentar esquecer. Mas a dúvida vai continuar lá. O peso vai continuar lá."
           </p>
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center gap-6"
+          transition={{ duration: 0.8 }}
+          className="flex flex-col items-center gap-10"
         >
           <motion.button
-            whileHover={{ scale: 1.05, filter: 'brightness(1.1)' }}
+            whileHover={{ scale: 1.05, filter: 'brightness(1.2)' }}
             whileTap={{ scale: 0.95 }}
-            className="w-[70vw] md:w-full md:max-w-[400px] py-5 rounded-[999px] bg-white text-black font-extrabold text-xl 
-                       shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] 
-                       transition-all duration-300 relative overflow-hidden group"
+            className="w-[85vw] md:w-full md:max-w-[450px] py-6 rounded-full bg-white text-black font-black text-2xl 
+                       shadow-[0_0_60px_rgba(255,255,255,0.15)] hover:shadow-[0_0_100px_rgba(255,255,255,0.3)] 
+                       transition-all duration-500 relative overflow-hidden group uppercase tracking-[0.25em]"
             onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
           >
-            <span className="relative z-10 uppercase tracking-wider">Quero mudar agora</span>
-            {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/50 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+            <span className="relative z-10">Não ignorar mais</span>
+            {/* Liquid Glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
           </motion.button>
           
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-zinc-500 text-xs font-semibold uppercase tracking-[0.2em] opacity-80">
-              Pagamento Seguro • Acesso Imediato
-            </p>
-            <div className="w-12 h-0.5 bg-zinc-800 rounded-full" />
+          <div className="flex flex-col items-center gap-4 opacity-40">
+             <div className="flex items-center gap-4">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-white">
+                  ÚLTIMA CHANCE DE ENTENDER
+                </p>
+             </div>
+             <p className="text-[9px] text-white max-w-[280px] uppercase tracking-widest font-light leading-loose">
+               Seu ciclo de silêncio termina no momento em que você decide olhar a verdade nos olhos.
+             </p>
           </div>
         </motion.div>
       </div>
 
-      {/* Subtle Background Elements */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-radial-gradient from-white/5 to-transparent pointer-events-none" />
+      {/* Extreme Radial Gradient for focus */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-radial-gradient from-white/[0.03] to-transparent pointer-events-none" />
     </section>
   )
 }
