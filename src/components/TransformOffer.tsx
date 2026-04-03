@@ -1,66 +1,51 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 export default function TransformOffer() {
   return (
-    <section className="bg-transparent text-white px-6 py-20 pb-16 overflow-hidden relative">
-      <div className="max-w-md mx-auto text-center flex flex-col items-center">
-        
-        {/* CRIATIVO 3 */}
+    <section className="py-24 px-6 relative overflow-hidden flex flex-col items-center justify-center text-center">
+      <div className="max-w-3xl mx-auto space-y-12 relative z-10">
+        <div className="space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
+            A sua nova vida <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">começa com um passo.</span>
+          </h2>
+          <p className="text-zinc-400 text-lg max-w-xl mx-auto">
+            Não deixe para amanhã a decisão que pode mudar <br className="hidden md:block" />
+            o curso da sua história hoje.
+          </p>
+        </div>
+
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="relative w-full flex items-center justify-center aspect-[4/5] rounded-2xl overflow-hidden shadow-xl mb-12 shadow-[0_30px_60px_rgba(0,0,0,0.15)] bg-transparent"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center gap-6"
         >
-          {/* Imagem Placeholder Homing/Transformação Claro */}
-          <img 
-            src="../public/img/criativo2.png" 
-            alt="Nascer do Sol - Transformação" 
-            className="w-full h-full object-cover filter brightness-[0.9] contrast-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+          <motion.button
+            whileHover={{ scale: 1.05, filter: 'brightness(1.1)' }}
+            whileTap={{ scale: 0.95 }}
+            className="w-[70vw] md:w-full md:max-w-[400px] py-5 rounded-[999px] bg-white text-black font-extrabold text-xl 
+                       shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] 
+                       transition-all duration-300 relative overflow-hidden group"
+            onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
+          >
+            <span className="relative z-10 uppercase tracking-wider">Quero mudar agora</span>
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/50 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+          </motion.button>
+          
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-zinc-500 text-xs font-semibold uppercase tracking-[0.2em] opacity-80">
+              Pagamento Seguro • Acesso Imediato
+            </p>
+            <div className="w-12 h-0.5 bg-zinc-800 rounded-full" />
+          </div>
         </motion.div>
-
-        {/* Texto Criativo 3 */}
-        <motion.h2
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl font-bold tracking-tighter mb-16 text-white leading-tight"
-        >
-          Tudo muda quando <br/> <span className="text-zinc-500 italic">você decide mudar.</span>
-        </motion.h2>
-
-        {/* Oferta */}
-        <motion.div
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           viewport={{ once: true, margin: "-100px" }}
-           transition={{ duration: 0.9, delay: 0.4 }}
-           className="bg-zinc-900/40 py-10 px-8 rounded-3xl w-full shadow-2xl mb-12 backdrop-blur-sm"
-        >
-          <p className="text-xl font-medium text-zinc-500 mb-2">
-            Você pode continuar como está…
-          </p>
-          <p className="text-2xl font-bold text-white tracking-tight">
-            ou <span className="text-zinc-100 italic underline decoration-zinc-800 underline-offset-8">começar sua mudança agora.</span>
-          </p>
-        </motion.div>
-
-        {/* CTA Principal */}
-        <motion.button 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8, delay: 0.6, type: 'spring', damping: 20 }}
-          className="w-full max-w-[320px] bg-white text-black font-black text-xl py-6 rounded-2xl shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:bg-zinc-100 hover:scale-[1.02] transition-all active:scale-95"
-          onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
-        >
-          Começar agora
-        </motion.button>
       </div>
+
+      {/* Subtle Background Elements */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-radial-gradient from-white/5 to-transparent pointer-events-none" />
     </section>
-  );
+  )
 }

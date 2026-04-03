@@ -1,41 +1,38 @@
-import { motion } from 'framer-motion';
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck, Mail } from 'lucide-react'
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className="bg-transparent text-white px-6 py-12 pb-20 overflow-hidden relative">
-      <div className="max-w-md mx-auto text-center flex flex-col items-center">
-        
-        {/* Garantia */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7 }}
-          className="flex flex-col items-center gap-4 bg-zinc-900/40 rounded-3xl p-8 w-full shadow-2xl mb-16 backdrop-blur-sm"
-        >
-          <ShieldCheck className="w-12 h-12 text-zinc-400 mb-2" />
-          <p className="text-zinc-500 font-medium text-lg leading-relaxed italic px-4">
-            "Se isso não te ajudar a ter mais clareza e direção, você pode simplesmente desistir."
-          </p>
-        </motion.div>
+    <footer className="py-20 px-6 bg-black border-t border-white/[0.03]">
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-12">
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-white/90 tracking-tighter italic">Protocolo Paixão de Cristo</h3>
+          <div className="w-8 h-1 bg-white/10 mx-auto rounded-full" />
+        </div>
 
-        {/* Fechamento */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <p className="text-xl font-bold tracking-tight text-zinc-500 mb-2">
-            Nada muda sozinho.
-          </p>
-          <p className="text-2xl font-bold tracking-tight text-white">
-            Mas tudo pode mudar <br/> com a <span className="border-b-2 border-zinc-500 pb-0.5">decisão certa.</span>
-          </p>
-        </motion.div>
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 text-zinc-500 text-sm">
+          <a href="mailto:contato@protocolo.com" className="flex items-center gap-2 hover:text-white transition-all">
+            <Mail className="w-4 h-4" />
+            contato@protocolo.com
+          </a>
+          <span className="hidden md:block w-1.5 h-1.5 bg-zinc-800 rounded-full" />
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4" />
+            Compra 100% Segura
+          </div>
+        </div>
 
+        <div className="pt-8 border-t border-white/5 w-full flex flex-col md:flex-row justify-between items-center gap-6 opacity-40">
+          <p className="text-[10px] uppercase tracking-[0.2em]">
+            © {currentYear} Protocolo • Direitos Reservados
+          </p>
+          <div className="flex gap-8">
+            <a href="#" className="text-[10px] uppercase tracking-[0.2em] hover:text-white transition-colors">Termos</a>
+            <a href="#" className="text-[10px] uppercase tracking-[0.2em] hover:text-white transition-colors">Privacidade</a>
+          </div>
+        </div>
       </div>
     </footer>
-  );
+  )
 }

@@ -1,57 +1,53 @@
-import { motion } from 'framer-motion';
-import { Target, Zap, Milestone, ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion'
+import { Target, Zap, Milestone, ArrowUpRight } from 'lucide-react'
 
 export default function Solution() {
   const benefits = [
-    { text: "Clareza total do que fazer", icon: <Target className="w-5 h-5 text-white" /> },
-    { text: "Sistema simples contra procrastinação", icon: <Zap className="w-5 h-5 text-white" /> },
-    { text: "Direção prática para o dia a dia", icon: <Milestone className="w-5 h-5 text-white" /> },
-    { text: "Saída do ciclo de tentativa e erro", icon: <ArrowUpRight className="w-5 h-5 text-white" /> },
-  ];
+    { text: "Clareza total do que fazer", icon: <Target className="w-5 h-5" /> },
+    { text: "Sistema simples contra procrastinação", icon: <Zap className="w-5 h-5" /> },
+    { text: "Direção prática para o dia a dia", icon: <Milestone className="w-5 h-5" /> },
+    { text: "Saída do ciclo de tentativa e erro", icon: <ArrowUpRight className="w-5 h-5" /> },
+  ]
 
   return (
-    <section className="bg-transparent text-white px-6 py-20 pb-24 relative overflow-hidden">
-      {/* Background glow subtlety */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-white opacity-[0.02] blur-[100px] rounded-full point-events-none"></div>
-
-      <div className="max-w-md mx-auto relative z-10">
+    <section className="py-24 px-6 md:px-10 relative overflow-hidden flex flex-col items-center">
+      <div className="max-w-xl w-full relative z-10 space-y-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center space-y-4"
         >
-          <p className="text-zinc-500 uppercase tracking-widest text-xs font-bold mb-3">
+          <p className="text-zinc-500 uppercase tracking-[0.3em] text-xs font-bold">
             O Método
           </p>
-          <h2 className="text-3xl font-bold tracking-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
             Protocolo de <br/> Saída do Ciclo
           </h2>
-          <p className="text-zinc-300 leading-relaxed font-light text-[17px] mb-12">
-            Um método direto, simples e aplicável que mostra exatamente o que fazer para sair da estagnação e criar uma direção real.
-          </p>
+          <div className="w-12 h-1 bg-white/20 mx-auto rounded-full" />
         </motion.div>
 
-        <ul className="space-y-4">
+        <div className="grid grid-cols-1 gap-6">
           {benefits.map((benefit, i) => (
-            <motion.li 
+            <motion.div 
               key={i}
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ delay: 0.1 * i, duration: 0.5 }}
-              className="flex items-start gap-4"
+              className="flex items-center gap-6 p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.05] transition-all group"
             >
-              <div className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                 {benefit.icon}
               </div>
-              <span className="text-zinc-200 font-medium text-base pt-1">
+              <span className="text-zinc-300 font-medium text-lg">
                 {benefit.text}
               </span>
-            </motion.li>
+            </motion.div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
-  );
+  )
 }

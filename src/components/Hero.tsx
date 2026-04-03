@@ -1,89 +1,58 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 export default function Hero() {
-
-
   return (
-    <section 
-      id="hero"
-      className="relative w-full min-h-screen flex items-center justify-center m-0 p-0 overflow-hidden"
-    >
-      {/* Imagem de Fundo integrada no CSS para garantir controle de performance */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1544427928-144944974d91?q=80&w=2600&auto=format&fit=crop')", // Uma imagem mais impactante e escura
-        }}
-      />
-      
-      {/* Overlay Escuro */}
-      <div 
-        className="absolute inset-0 z-10" 
-        style={{ backgroundColor: 'rgba(0,0,0,0.35)' }}
-      />
-
-      {/* Container Centralizado */}
-      <div className="relative z-20 w-full max-w-[600px] px-[20px] text-center flex flex-col items-center justify-center">
+    <section className="relative h-[90vh] w-full flex items-center justify-center overflow-hidden px-4 md:px-0">
+      {/* Video Container */}
+      <div className="relative w-full h-full max-w-[1200px] mx-auto overflow-hidden rounded-[2.5rem] shadow-2xl shadow-black/90 border border-white/5 bg-black">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          className="w-full h-full object-cover"
+        >
+          <source src="/img/vsl.mp4" type="video/mp4" />
+        </video>
         
-        {/* Imagem de Jesus */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="mb-8 w-40 h-40 flex items-center justify-center"
-        >
-          <img 
-            src="/img/jesus.png" 
-            alt="Jesus" 
-            className="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-          />
-        </motion.div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40 z-10" />
 
-        {/* Título Principal */}
-        <motion.h1 
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="m-0 text-[32px] md:text-[40px] font-semibold leading-[1.2] text-white"
-        >
-          Não deixe que Ele tenha sido em vão…
-        </motion.h1>
+        {/* Text Overlays */}
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-between py-16 px-6 text-center text-white pointer-events-none pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <h2 className="text-xl md:text-2xl font-semibold drop-shadow-md tracking-tight opacity-90">
+              Você já tentou mudar…
+            </h2>
+          </motion.div>
 
-        {/* Subtítulo */}
-        <motion.p 
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="m-0 mt-[12px] text-[18px] md:text-[20px] font-normal leading-[1.5] text-white/85"
-        >
-          Faça valer o sacrifício Dele na sua vida.
-        </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, delay: 0.8 }}
+            className="max-w-3xl"
+          >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] drop-shadow-2xl">
+              E mesmo assim… <br />
+              <span className="text-white/90">nada mudou.</span>
+            </h1>
+          </motion.div>
 
-        {/* Texto de Transição */}
-        <motion.p 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="m-0 mt-[40px] max-w-[500px] text-[18px] leading-[1.5] text-white/80 font-normal"
-        >
-          Você continua no mesmo lugar… <br className="hidden md:block" />
-          porque ainda não tomou uma decisão de verdade.
-        </motion.p>
-
-        {/* Botão CTA */}
-        <motion.button 
-          initial={{ opacity: 1 }}
-          whileHover={{ scale: 1.05, filter: 'brightness(1.15)' }}
-          whileTap={{ scale: 0.95 }}
-          className="m-0 mt-[28px] border-none outline-none px-[28px] py-[16px] rounded-full text-white text-[16px] font-semibold flex items-center justify-center shadow-[0_8px_30px_rgba(255,106,0,0.3)] transition-all cursor-pointer"
-          style={{
-            background: 'linear-gradient(90deg, #FF6A00, #FF8C42)',
-          }}
-          onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
-        >
-          Quero mudar agora
-        </motion.button>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.1 }}
+          >
+            <h3 className="text-xl md:text-2xl font-semibold drop-shadow-md tracking-tight opacity-90">
+              E no fundo… você sabe o porquê.
+            </h3>
+          </motion.div>
+        </div>
       </div>
     </section>
-  );
+  )
 }

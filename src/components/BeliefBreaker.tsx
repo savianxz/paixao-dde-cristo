@@ -1,65 +1,39 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 export default function BeliefBreaker() {
   return (
-    <section className="bg-transparent text-white px-6 py-16 pb-24 overflow-hidden relative">
-      <div className="max-w-md mx-auto text-center space-y-12">
-        
-        {/* Quebra de Crença 1 */}
+    <section className="py-24 px-6 relative overflow-hidden flex flex-col items-center justify-center text-center bg-zinc-900/10">
+      <div className="max-w-5xl mx-auto space-y-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="text-3xl md:text-5xl font-medium text-white/80 tracking-tight"
         >
-          <h2 className="text-3xl font-bold leading-tight tracking-tight mb-4">
-            Você não está <span className="text-zinc-400">sem motivação.</span>
-          </h2>
-          <h2 className="text-3xl font-bold leading-tight tracking-tight">
-            Você está sem <span className="text-white border-b-2 border-zinc-500 pb-1">direção.</span>
-          </h2>
+          Não é falta de força.
         </motion.div>
 
-        {/* Quebra de Crença 2 */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl text-zinc-400 font-light leading-relaxed"
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-3xl md:text-5xl font-medium text-white/80 tracking-tight"
         >
-          "Você tentou sozinho… <br/> e sempre voltou pro mesmo lugar."
-        </motion.p>
+          Não é falta de fé.
+        </motion.div>
 
-        {/* CRIATIVO 1 */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative w-full aspect-[4/5] flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl mt-12 mb-6 bg-transparent"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="text-5xl md:text-7xl font-bold text-white tracking-tighter"
         >
-          {/* Imagem Placeholder de Ambiente Escuro/Dor */}
-          <img 
-            src="/img/espiritual.jpg" 
-            alt="Reflexão espiritual" 
-            className="w-full h-full object-contain filter brightness-[0.7] contrast-125 grayscale-[20%]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
+          É falta de direção.
         </motion.div>
-
-        {/* Texto do Criativo 1 */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg font-medium text-zinc-300 italic"
-        >
-          Nada muda… <br/>
-          quando você continua no mesmo padrão.
-        </motion.p>
       </div>
     </section>
-  );
+  )
 }
