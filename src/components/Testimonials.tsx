@@ -16,7 +16,7 @@ export default function Testimonials() {
   return (
     <section className="py-48 px-4 relative overflow-hidden bg-black flex flex-col items-center">
       
-      {/* Title with Discovery Tone */}
+      {/* Title with Confrontation Tone */}
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -25,9 +25,9 @@ export default function Testimonials() {
         className="text-center mb-24 relative z-10"
       >
         <h2 className="text-3xl md:text-5xl font-black text-white tracking-[0.2em] uppercase drop-shadow-[0_0_40px_rgba(255,255,255,0.2)]">
-          O momento em que tudo fez sentido.
+          "Me pegou de um jeito que eu não esperava."
         </h2>
-        <p className="text-white/20 text-xs mt-6 font-bold tracking-[0.6em] uppercase">Testemunhas da travessia</p>
+        <p className="text-white/20 text-xs mt-6 font-bold tracking-[0.6em] uppercase">Testemunhas do confronto interno</p>
       </motion.div>
 
       {/* Infinite Scroll Wrapper with non-linear motion */}

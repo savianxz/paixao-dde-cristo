@@ -30,15 +30,25 @@ export default function TransformOffer() {
           transition={{ duration: 1.2, delay: 1 }}
           className="flex flex-col items-center gap-12"
         >
+          {/* Psychological Urgency Warning */}
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 0.6 }}
+            transition={{ duration: 1.5, delay: 1.2 }}
+            className="text-white/60 text-lg md:text-2xl font-light tracking-[0.2em] italic uppercase"
+          >
+            Se você sair agora… vai esquecer isso de novo.
+          </motion.p>
+
           <motion.button
             whileHover={{ scale: 1.05, filter: 'brightness(1.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="w-[90vw] md:w-full md:max-w-[550px] py-8 rounded-full bg-white text-black font-black text-2xl 
+            className="w-[90vw] md:w-full md:max-w-[650px] py-10 rounded-full bg-white text-black font-black text-2xl 
                        shadow-[0_0_100px_rgba(255,255,255,0.2)] hover:shadow-[0_0_150px_rgba(255,255,255,0.4)] 
-                       transition-all duration-700 relative overflow-hidden group uppercase tracking-[0.4em] tracking-[0.3em]"
+                       transition-all duration-700 relative overflow-hidden group uppercase tracking-[0.3em]"
             onClick={() => window.location.href = 'https://go.ironpayapp.com.br/nwjt60ww6j'}
           >
-            <span className="relative z-10">Parar de ignorar</span>
+            <span className="relative z-10">Parar de ignorar isso agora</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
           </motion.button>
           
